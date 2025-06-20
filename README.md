@@ -1,52 +1,119 @@
 # Hospital-Management-System
-Hospital Management System (Java OOP)
-This is a comprehensive Hospital Management System developed using Java and Object-Oriented Programming (OOP) principles. The system provides functionalities for managing patient registrations, appointments, patient records, staff, and user authentication.
-Features
-The system includes the following key features:
-User Authentication: Secure login system with distinct roles for Admin and Non-Admin users. Includes functionality for setting and changing passwords.
-Patient Registration: 
-Register new patients with unique Patient IDs.
-Record essential patient details such as name, CNIC, parent/guardian information, contact, age, and gender.
-Automatic creation of dedicated files for patient records and appointments upon registration.
-Patient Management: 
-Manage and update existing patient records.
-Store detailed patient checkup data, including category, amount, age, gender, date, and time.
-Appointment Management: 
-Schedule and manage patient appointments.
-Record appointment-specific data like category, amount, age, gender, date, and time.
-Automatic date and time stamping for appointments.
-Patient Search: Search and retrieve patient records based on Patient ID, covering both general and appointment-related information.
-Staff Management: 
-Add Staff: Register new staff members with unique Staff IDs. Store details including name, CNIC, contact, category, address, age, gender, date, time, and shift.
-Delete Staff: Remove staff records from the system using their Staff ID.
-Data Management: The system creates and manages a structured DataFiles directory to store patient IDs, staff IDs, passwords, appointments, patient records, registered patients, and staff data.
-Initial Setup: A Setup utility is available to initialize the necessary data directories and files, and can also be used to clear previous records.
-Technologies Used
-Java: The core programming language.
-JavaFX: Used for building the graphical user interface (GUI) of the application.
-Setup and Installation
-To run this project, ensure you have a Java Development Kit (JDK) with JavaFX support installed.
-Clone the repository (if applicable):
-Bash
-git clone <repository_url>
-Navigate to the project directory:
-Bash
-cd HospitalManagementSystem
-Run the Setup.java file: This will create the necessary data directories and files.
-Compile: javac Setup.java
-Run: java Setup
-Follow the on-screen prompts.
-Compile and Run MainPanel.java:
-Compile: javac MainPanel.java
-Run: java MainPanel
-Alternatively, you can run the LogPanel.java first, which provides an administrative login to access the MainPanel.
-Compile: javac LogPanel.java
-Run: java LogPanel
-Usage
-Login: Start the application from LogPanel.java. You can log in as an Admin or Non-Admin user. If it's the first run, you might need to set a password for the Admin.
-Main Panel: After successful login, the MainPanel will be displayed, providing access to various modules like Patient Registration, Patient Management, Appointment Management, Staff Management, and Patient Search.
-Patient Registration: Register new patients and their details.
-Appointment Management: Schedule and manage appointments for registered patients.
-Patient Search: Search for patient records using their unique IDs.
-Staff Management: Add or delete staff records.
+🏥 Hospital Management System (Java OOP)
+A comprehensive Hospital Management System built using Java and Object-Oriented Programming (OOP) principles. The application provides modules to handle patient registration, appointments, records, staff management, and user authentication through a clean GUI interface using JavaFX.
 
+📌 Features
+🔐 User Authentication
+Secure login system with role-based access (Admin and Non-Admin).
+
+Supports password setting and modification.
+
+🧾 Patient Registration
+Register patients with unique Patient IDs.
+
+Capture essential details: Name, CNIC, parent/guardian info, contact, age, and gender.
+
+Automatically creates files for patient records and appointments.
+
+🗃️ Patient Management
+Update and manage patient records.
+
+Store detailed checkup data: category, amount, age, gender, date, and time.
+
+📅 Appointment Management
+Schedule and manage appointments for patients.
+
+Includes automatic date and time stamping.
+
+🔍 Patient Search
+Search patient information using Patient ID.
+
+View both general records and appointment history.
+
+👩‍⚕️ Staff Management
+Add Staff: Register new staff with unique Staff IDs and complete profile.
+
+Delete Staff: Remove staff using Staff ID.
+
+📁 Data Management
+Organized DataFiles/ directory for:
+
+Patient & Staff data
+
+Appointments & Records
+
+User authentication (passwords)
+
+Setup utility to initialize or reset system data.
+
+💻 Technologies Used
+Java – Core application logic
+
+JavaFX – Graphical User Interface (GUI)
+
+File I/O – For persistent local storage
+
+⚙️ Setup and Installation
+Ensure you have JDK (Java Development Kit) installed with JavaFX support.
+
+Step-by-step Guide
+Clone the Repository
+
+bash
+Copy
+Edit
+git clone <repository_url>
+cd HospitalManagementSystem
+Initialize the System (Run Setup)
+
+bash
+Copy
+Edit
+javac Setup.java
+java Setup
+Run the Application
+
+Option 1: Direct Access via Main Panel
+
+bash
+Copy
+Edit
+javac MainPanel.java
+java MainPanel
+Option 2: Admin Login First (Recommended)
+
+bash
+Copy
+Edit
+javac LogPanel.java
+java LogPanel
+🚀 Usage
+Login: Use the LogPanel to log in as Admin or Non-Admin.
+
+Main Dashboard: Navigate to patient registration, appointment management, staff management, and more.
+
+Register Patients: Input and store personal and medical info.
+
+Schedule Appointments: Assign date, time, and medical category.
+
+Search Records: Retrieve data by entering Patient ID.
+
+Manage Staff: Add or remove staff with complete details.
+
+📁 Directory Structure
+bash
+Copy
+Edit
+HospitalManagementSystem/
+│
+├── Setup.java               # Initializes file structure
+├── LogPanel.java            # Login interface
+├── MainPanel.java           # Main dashboard post-login
+├── DataFiles/               # Directory for all saved data
+│   ├── PatientIDs.txt
+│   ├── StaffIDs.txt
+│   ├── Appointments/
+│   └── Records/
+└── ...
+📝 License
+This project is intended for educational purposes. License terms can be added here if applicable.
